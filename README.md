@@ -60,28 +60,19 @@ Expected response (JSON array of stations):
 
 ---
 
-## Student Tasks
+## Next Tasks
 
-### Task 1 – Basic (GK)
+### Tasks 1
 - [ ] Run the application and verify the `/api/v1/stations` endpoint works.
 - [ ] Add a new field `waterFlow` (double) to the `Station` model. Verify the new field appears in the JSON response.
 - [ ] Add a new endpoint `GET /api/v1/stations/{id}` that returns a single station by its ID.
 
-### Task 2 – Extended (EK)
+### Tasks 2
 - [ ] Add a `GET /api/v1/stations/count` endpoint that returns the number of stations as a plain integer.
 - [ ] Return an appropriate HTTP status code (`404 Not Found`) when a station with the given ID does not exist.
 - [ ] Add a `POST /api/v1/stations` endpoint that accepts a JSON body and adds a new station to the (in-memory) list.
 
-### Task 3 – Advanced (optional)
+### Tasks 3
 - [ ] Add XML support: return XML instead of JSON when the client sends `Accept: application/xml`.
 - [ ] Integrate **Springdoc OpenAPI** (Swagger UI) to document your API.
-- [ ] Add input validation using `jakarta.validation` annotations.
 
----
-
-## Tips
-
-- Use `@PathVariable` to extract path parameters like `{id}`.
-- Use `@RequestBody` to accept JSON input in POST requests.
-- Use `ResponseEntity<T>` to control HTTP status codes.
-- The Spring Boot DevTools dependency enables automatic restart on code changes.
