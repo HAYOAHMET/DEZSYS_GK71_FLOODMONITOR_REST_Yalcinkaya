@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.Random;
 
 @Service
@@ -35,5 +36,11 @@ public class SimulationService {
         }
 
         return stations;
+    }
+
+    public Optional<Station> getStationById(String id) {
+        return generateStations().stream()
+            .filter(s -> s.getId().equals(id))
+            .findFirst();
     }
 }
